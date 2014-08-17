@@ -24,6 +24,7 @@ namespace BookService
                       "~/Content/bootstrap.css",
                       "~/Content/angular-ui.css",
                       "~/Content/toaster.css",
+                      "~/Content/angular-busy.css",
                       "~/Content/site.css"));
 
             //new code:
@@ -39,7 +40,11 @@ namespace BookService
                     "~/Scripts/angular-animate.js",
                     "~/Scripts/angular-ui.js",
                     "~/Scripts/toaster.js",
-                    "~/Scripts/app.js"));
+                    "~/Scripts/angular-busy.js",
+                    "~/Scripts/app/app.js",
+                    "~/Scripts/app/books/BookController.js",
+                    "~/Scripts/app/books/BookService.js",
+                    "~/Scripts/app/books/AuthorService.js"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
