@@ -6,14 +6,7 @@
     <h1>BookService - Angular</h1>
     <toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
     <!-- https://github.com/jirikavi/AngularJS-Toaster -->
-</div>
-
-<div ng-controller="BookController as bookCtrl">
-    <ul ng-show="bookCtrl.showList">
-        <li ng-repeat="book in bookCtrl.books">
-            {{book.Title}}
-        </li>
-    </ul>
+    
 </div>
 
 <div class="row" ng-controller="BookController as bookCtrl">
@@ -23,6 +16,7 @@
                 <h2 class="panel-title">Books</h2>
             </div>
             <div class="panel-body">
+                <div cg-busy="bookCtrl.busyPromise"></div>
                 <ul class="list-unstyled">
                     <li ng-repeat="book in bookCtrl.books">
                         <strong><span>{{book.AuthorName}}</span></strong>: <span>{{book.Title}}</span>
@@ -56,9 +50,7 @@
             </div>
 
             <div class="panel-body">
-                <form name="form" class="form-horizontal" ng-submit="bookCtrl.addNewBook()" novalidate showvalidation>
-
-
+                <form name="bookForm" class="form-horizontal" ng-submit="bookCtrl.addNewBook(bookForm)" novalidate>
                     <div class="form-group">
                         <label for="inputAuthor" class="col-sm-2 control-label">Author</label>
                         <div class="col-sm-10">
@@ -96,12 +88,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
-                            <button type="submit" class="btn btn-default" ng-disabled="form.$invalid">Submit</button>
+                            <button type="submit" class="btn btn-default" ng-disabled="bookForm.$invalid">Submit</button>                            
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 </div>
