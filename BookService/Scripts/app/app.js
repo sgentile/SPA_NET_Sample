@@ -1,7 +1,7 @@
 ﻿/// <reference path="angular.js" />
 
 (function () {
-    angular.module('app', ['ngResource', 'ngAnimate', 'ui', 'ui.filters', 'toaster', 'cgBusy']);
+    angular.module('app', ['ngResource', 'ngAnimate', 'ui', 'ui.filters', 'toaster', 'cgBusy', 'class']);
 
     
 

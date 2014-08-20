@@ -241,6 +241,7 @@
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-busy.js" />
+    <Content Include="Scripts\angular-class.js" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-csp.css" />
@@ -262,9 +263,11 @@
     <Content Include="Scripts\angular-ui.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app\BaseResourceService.js" />
     <Content Include="Scripts\app\books\AuthorService.js" />
     <Content Include="Scripts\app\books\BookController.js" />
     <Content Include="Scripts\app\books\BookService.js" />
+    <Content Include="Scripts\ClassUtility.js" />
     <Content Include="Scripts\knockoutapp.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\bootstrap.js" />

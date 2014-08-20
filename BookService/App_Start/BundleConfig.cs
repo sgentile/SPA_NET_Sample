@@ -32,7 +32,8 @@ namespace BookService
                     "~/Scripts/knockout-{version}.js",
                     "~/Scripts/knockoutapp.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/ng").Include(
+            bundles.Add(new ScriptBundle("~/bundles/ng").Include(                    
+                    "~/Scripts/ClassUtility.js",
                     "~/Scripts/lodash.js",
                     "~/Scripts/angular.js",
                     "~/Scripts/angular-resource.js",
@@ -41,7 +42,9 @@ namespace BookService
                     "~/Scripts/angular-ui.js",
                     "~/Scripts/toaster.js",
                     "~/Scripts/angular-busy.js",
+                    "~/Scripts/angular-class.js",
                     "~/Scripts/app/app.js",
+                    "~/Scripts/app/BaseResourceService.js",                    
                     "~/Scripts/app/books/BookController.js",
                     "~/Scripts/app/books/BookService.js",
                     "~/Scripts/app/books/AuthorService.js"));

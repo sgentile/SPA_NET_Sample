@@ -4,8 +4,13 @@
 
     app.controller('BookController', ['$http', 'BookService', 'AuthorService', 'toaster', function ($http, BookService, AuthorService, toaster) {
         var self = this;
-        self.books = BookService.query();
-        self.authors = AuthorService.query();
+
+
+        self.bookService = new BookService(),
+        self.authorService = new AuthorService();
+
+        self.books = self.bookService.query();
+        self.authors = self.authorService.query();
 
         self.details = null;
         self.book = {
@@ -20,16 +25,17 @@
 
         self.showDetails = function (book) {
             self.currentBook = book;
-            BookService.get({ id: book.Id }, function (data) {
-                self.details = data;
+            self.bookService.get({ id: book.Id }).$promise.then(function (data) {
+                self.details = data;                
             });
         };
 
-        self.addNewBook = function () {
+        self.addNewBook = function (bookForm) {
             self.newBook.AuthorId = self.newBook.Author.Id;
             BookService.save(self.newBook, function (data) {
                 self.books.push(data);
                 toaster.pop('success', "New Book Added", self.newBook.Title + " by " + self.newBook.Author.Name);
+                bookForm.$setPristine();
                 self.newBook = angular.copy(self.book);
             }, function (err) {
                 toaster.pop('error', "Error Adding Book", '<ul><li>' + err + '</li></ul>', null, 'trustedHtml');
