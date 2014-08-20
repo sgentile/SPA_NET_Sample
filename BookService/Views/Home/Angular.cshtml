@@ -75,9 +75,19 @@
                     <div class="form-group">
                         <label for="inputGenre" class="col-sm-2 control-label">Genre</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputGenre" ng-model="bookCtrl.newBook.Genre" required />
+                            <select class="form-control" ng-model="bookCtrl.newBook.Genre" ng-options="genre.Name for genre in bookCtrl.genres | unique:'Name'" required>
+                                <option value="">-- Choose Genre --</option>
+                            </select>
                         </div>
-                    </div>
+                        @*<div class="col-sm-10 col-sm-offset-2"><span>Not in the list?</span></div>
+                        <div class="form-group col-sm-offset-2">
+                            <label for="inputNewGenre" class="col-sm-2 control-label">New Genre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputNewGenre" ng-model="bookCtrl.newGenre.Name" required />
+                            </div>
+                        </div>*@
+                       
+                   </div>
 
                     <div class="form-group">
                         <label for="inputPrice" class="col-sm-2 control-label">Price</label>

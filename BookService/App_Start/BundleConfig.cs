@@ -40,6 +40,7 @@ namespace BookService
                     "~/Scripts/angular-route.js",
                     "~/Scripts/angular-animate.js",
                     "~/Scripts/angular-ui.js",
+                    "~/Scripts/angular-ui/ui-bootstrap.js",
                     "~/Scripts/toaster.js",
                     "~/Scripts/angular-busy.js",
                     "~/Scripts/angular-class.js",
@@ -47,7 +48,8 @@ namespace BookService
                     "~/Scripts/app/BaseResourceService.js",                    
                     "~/Scripts/app/books/BookController.js",
                     "~/Scripts/app/books/BookService.js",
-                    "~/Scripts/app/books/AuthorService.js"));
+                    "~/Scripts/app/authors/AuthorService.js",
+                    "~/Scripts/app/genres/GenreService.js"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

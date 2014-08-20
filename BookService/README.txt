@@ -20,3 +20,10 @@ input "Update-Database"
 Note: In step 6 part 3, if you get an error "Cannot attach the file...", it is possibly because you didn't delete the database files completely in SQL Server.
 
 (Also, you might have to locally create the BookService.mdf file - create App_Data folder and add it)
+
+
+====
+1. Process - add new class (ie. Genre).  Add new DbSet (ie. public System.Data.Entity.DbSet<BookService.Models.Genre> Genres { get; set; })
+2. Create seed data, etc...
+3. Add-Migration <name>   ie. Add-Migration AddGenre
+4. Update-Database to bring the database up-to-date. This time let’s specify the –Verbose flag so that you can see the SQL that Code First Migrations is running.

@@ -12,6 +12,9 @@
             },
             get: function(params) {
                 return this.resource.get(params);
+            },
+            save: function(params) {
+                return this.resource.save(params);
             }
         });
     }]);

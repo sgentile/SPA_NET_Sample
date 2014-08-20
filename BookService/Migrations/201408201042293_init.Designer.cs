@@ -13,7 +13,7 @@ namespace BookService.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201408201014360_init"; }
+            get { return "201408201042293_init"; }
         }
         
         string IMigrationMetadata.Source

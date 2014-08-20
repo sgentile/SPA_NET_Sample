@@ -201,13 +201,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201408201014360_init.cs" />
-    <Compile Include="Migrations\201408201014360_init.Designer.cs">
-      <DependentUpon>201408201014360_init.cs</DependentUpon>
+    <Compile Include="Migrations\201408201042293_init.cs" />
+    <Compile Include="Migrations\201408201042293_init.Designer.cs">
+      <DependentUpon>201408201042293_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -217,6 +218,7 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookDTO.cs" />
     <Compile Include="Models\BookServiceContext.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -266,12 +268,17 @@
     <Content Include="Scripts\angular-ui-ieshiv.min.js" />
     <Content Include="Scripts\angular-ui.js" />
     <Content Include="Scripts\angular-ui.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\BaseResourceService.js" />
-    <Content Include="Scripts\app\books\AuthorService.js" />
+    <Content Include="Scripts\app\authors\AuthorService.js" />
     <Content Include="Scripts\app\books\BookController.js" />
     <Content Include="Scripts\app\books\BookService.js" />
+    <Content Include="Scripts\app\genres\GenreService.js" />
     <Content Include="Scripts\ClassUtility.js" />
     <Content Include="Scripts\knockoutapp.js" />
     <Content Include="Scripts\app\app.js" />
@@ -624,18 +631,17 @@
     <Content Include="Views\Home\Knockout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201408201042293_init.resx">
+      <DependentUpon>201408201042293_init.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201408201014360_init.resx">
-      <DependentUpon>201408201014360_init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

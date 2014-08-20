@@ -49,7 +49,7 @@ namespace BookService.Controllers
                     Year = b.Year,
                     Price = b.Price,
                     AuthorName = b.Author.Name,
-                    Genre = b.Genre
+                    Genre = b.Genre.Name
                 }).SingleOrDefaultAsync(b => b.Id == id);
 
             if (book == null)
