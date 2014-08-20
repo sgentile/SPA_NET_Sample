@@ -205,9 +205,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201408201004240_InitialCreate.cs" />
-    <Compile Include="Migrations\201408201004240_InitialCreate.Designer.cs">
-      <DependentUpon>201408201004240_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201408201014360_init.cs" />
+    <Compile Include="Migrations\201408201014360_init.Designer.cs">
+      <DependentUpon>201408201014360_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -224,6 +224,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BookService.mdf" />
+    <Content Include="App_Data\BookService_log.ldf">
+      <DependentUpon>BookService.mdf</DependentUpon>
+    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\angular-busy.css" />
     <Content Include="Content\angular-ui.css" />
@@ -238,6 +242,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="README.txt" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-busy.js" />
@@ -619,9 +624,7 @@
     <Content Include="Views\Home\Knockout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -630,8 +633,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201408201004240_InitialCreate.resx">
-      <DependentUpon>201408201004240_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201408201014360_init.resx">
+      <DependentUpon>201408201014360_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
