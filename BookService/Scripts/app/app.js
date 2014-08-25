@@ -9,17 +9,18 @@
               templateUrl: '/Views/Partials/AddBook.html',
               controller: 'AddBookCtrl',
               controllerAs: 'vm'
-          }).
-          //when('/phones/:phoneId', {
-          //    templateUrl: 'partials/phone-detail.html',
-          //    controller: 'PhoneDetailCtrl'
-          //}).
+          })
+            .when('/bookdetail/:bookId', {
+                templateUrl: '/Views/Partials/BookDetail.html',
+                controller: 'BookDetailCtrl',
+                controllerAs: 'vm'
+            }).
           otherwise({
               redirectTo: '/'
           });
     }]);
-        
-    
+
+
 
     //http://stackoverflow.com/questions/14348384/reconcile-angular-js-and-bootstrap-form-validation-styling
     /*

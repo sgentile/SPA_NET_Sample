@@ -47,6 +47,7 @@ namespace BookService
                     "~/Scripts/app/app.js",                    
                     "~/Scripts/app/BaseResourceService.js",
                     "~/Scripts/app/books/AddBookController.js",
+                    "~/Scripts/app/books/BookDetailsController.js",
                     "~/Scripts/app/books/BookController.js",
                     "~/Scripts/app/books/BookService.js",
                     "~/Scripts/app/authors/AuthorService.js",
