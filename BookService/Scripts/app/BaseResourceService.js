@@ -4,7 +4,7 @@
             init: function (resourceUri) { // Constructor
                 // object initialisation
                 this.resource = $resource(resourceUri, { Id: "@Id" }, {
-                    'update': { method: 'PUT' }
+                    'update': { method: 'PUT' }                    
                 });
             },
             query: function () {

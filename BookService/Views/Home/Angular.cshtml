@@ -27,6 +27,8 @@
         </div>
         @*<div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>*@
     </div>
+    
+    <div ng-view></div>
 
     <div class="col-md-4" ng-show="bookCtrl.details != null">
         <div class="panel panel-default">
@@ -42,67 +44,8 @@
                 <tr><td colspan="2"><button class="btn btn-danger" ng-click="bookCtrl.DeleteBook()">Delete</button></td></tr>
             </table>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">Add Book</h2>
-            </div>
-
-            <div class="panel-body">
-                <form name="bookForm" class="form-horizontal" ng-submit="bookCtrl.addNewBook(bookForm)" novalidate>
-                    <div class="form-group">
-                        <label for="inputAuthor" class="col-sm-2 control-label">Author</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" ng-model="bookCtrl.newBook.Author" ng-options="author.Name for author in bookCtrl.authors | unique:'Name'" required>
-                                <option value="">-- Choose Author --</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputTitle" class="col-sm-2 control-label">Title</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputTitle" ng-model="bookCtrl.newBook.Title" required />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputYear" class="col-sm-2 control-label">Year</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="inputYear" ng-model="bookCtrl.newBook.Year" required />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputGenre" class="col-sm-2 control-label">Genre</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" ng-model="bookCtrl.newBook.Genre" ng-options="genre.Name for genre in bookCtrl.genres | unique:'Name'" required>
-                                <option value="">-- Choose Genre --</option>
-                            </select>
-                        </div>
-                        @*<div class="col-sm-10 col-sm-offset-2"><span>Not in the list?</span></div>
-                        <div class="form-group col-sm-offset-2">
-                            <label for="inputNewGenre" class="col-sm-2 control-label">New Genre</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputNewGenre" ng-model="bookCtrl.newGenre.Name" required />
-                            </div>
-                        </div>*@
-                       
-                   </div>
-
-                    <div class="form-group">
-                        <label for="inputPrice" class="col-sm-2 control-label">Price</label>
-                        <div class="col-sm-10">
-                            <input type="number" step="any" class="form-control" id="inputPrice" ng-model="bookCtrl.newBook.Price" required />
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <button type="submit" class="btn btn-default" ng-disabled="bookForm.$invalid">Submit</button>                            
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    </div>    
 </div>
+
+<hr/>
+
