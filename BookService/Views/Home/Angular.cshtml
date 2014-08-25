@@ -20,7 +20,8 @@
                 <ul class="list-unstyled">
                     <li ng-repeat="book in bookCtrl.books">
                         <strong><span>{{book.AuthorName}}</span></strong>: <span>{{book.Title}}</span>
-                        <small><a href="#" ng-click="bookCtrl.showDetails(book)">Details</a></small>
+                        @*<small><a href="#" ng-click="bookCtrl.showDetails(book)">Details</a></small>*@
+                        <small><a ng-href="#/bookdetail/{{book.Id}}">Details</a></small>
                     </li>
                 </ul>
             </div>
@@ -28,23 +29,7 @@
         @*<div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>*@
     </div>
     
-    <div ng-view></div>
-
-    <div class="col-md-4" ng-show="bookCtrl.details != null">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">Detail</h2>
-            </div>
-            <table class="table">
-                <tr><td>Author</td><td>{{bookCtrl.details.AuthorName}}</td></tr>
-                <tr><td>Title</td><td>{{bookCtrl.details.Title}}</td></tr>
-                <tr><td>Year</td><td>{{bookCtrl.details.Year}}</td></tr>
-                <tr><td>Genre</td><td>{{bookCtrl.details.Genre}}</td></tr>
-                <tr><td>Price</td><td>$ {{bookCtrl.details.Price}}</td></tr>
-                <tr><td colspan="2"><button class="btn btn-danger" ng-click="bookCtrl.DeleteBook()">Delete</button></td></tr>
-            </table>
-        </div>
-    </div>    
+    <div ng-view></div>       
 </div>
 
 <hr/>

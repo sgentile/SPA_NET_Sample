@@ -273,6 +273,7 @@
     <Content Include="Scripts\app\BaseResourceService.js" />
     <Content Include="Scripts\app\authors\AuthorService.js" />
     <Content Include="Scripts\app\books\BookController.js" />
+    <Content Include="Scripts\app\books\BookDetailsController.js" />
     <Content Include="Scripts\app\books\BookService.js" />
     <Content Include="Scripts\app\genres\GenreService.js" />
     <Content Include="Scripts\app\books\AddBookController.js" />
@@ -609,6 +610,7 @@
     <Content Include="Scripts\select2.min.js" />
     <Content Include="Scripts\toaster.js" />
     <Content Include="Views\Partials\AddBook.html" />
+    <Content Include="Views\Partials\BookDetail.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
