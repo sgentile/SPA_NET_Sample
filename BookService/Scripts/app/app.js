@@ -1,8 +1,24 @@
 ﻿/// <reference path="angular.js" />
 
 (function () {
-    angular.module('app', ['ngResource', 'ngAnimate', 'ui', 'ui.filters', 'ui.bootstrap', 'toaster', 'cgBusy', 'class']);
+    var app = angular.module('app', ['ngRoute', 'ngResource', 'ngAnimate', 'ui', 'ui.filters', 'ui.bootstrap', 'toaster', 'cgBusy', 'class']);
 
+    app.config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.
+          when('/', {
+              templateUrl: '/Views/Partials/AddBook.html',
+              controller: 'AddBookCtrl',
+              controllerAs: 'vm'
+          }).
+          //when('/phones/:phoneId', {
+          //    templateUrl: 'partials/phone-detail.html',
+          //    controller: 'PhoneDetailCtrl'
+          //}).
+          otherwise({
+              redirectTo: '/'
+          });
+    }]);
+        
     
 
     //http://stackoverflow.com/questions/14348384/reconcile-angular-js-and-bootstrap-form-validation-styling
