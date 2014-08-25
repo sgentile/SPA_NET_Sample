@@ -6,7 +6,9 @@
         var self = this;
         self.bookService = new BookService();
 
-        self.books = self.bookService.query();
+        self.busyPromise = self.bookService.query().$promise.then(function(data) {
+            self.books = data;
+        });
         
            
         $scope.$on("NewBook", function(event, newBook) {
