@@ -27,3 +27,10 @@ Note: In step 6 part 3, if you get an error "Cannot attach the file...", it is p
 2. Create seed data, etc...
 3. Add-Migration <name>   ie. Add-Migration AddGenre
 4. Update-Database to bring the database up-to-date. This time let’s specify the –Verbose flag so that you can see the SQL that Code First Migrations is running.
+
+
+If you delete the DB file, it still stays registered with SqlLocalDB. If LocalDb gets hung up with can’t attach (after manually deleting the DB file) or Login failed see JSobell’s and CodingwithSpike’s answers here:
+
+ef5-cannot-attach-the-file-0-as-database-1.
+
+Run ‘sqllocaldb.exe stop v11.0’ and ‘sqllocaldb.exe delete v11.0’ from the PM Console
