@@ -1,0 +1,13 @@
+﻿{
+    "Framework": "jasmine",
+
+    "FrameworkVersion": "",
+    
+    "Tests": [
+        {"Path" : "SampleTest.spec.js"}, 
+    ],
+    "References" : [
+        {"Path" : "../Scripts/angular.js" }        
+    ]
+
+}

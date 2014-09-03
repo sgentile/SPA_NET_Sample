@@ -20,10 +20,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Knockout", "Knockout", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Angular", "Angular", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>   
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
                 </ul>
             </div>
@@ -41,14 +38,5 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/libs")
     @RenderSection("scripts", required: false)
-    
-    <script type="text/javascript" src="/App/app.js"></script>
-    <script type="text/javascript" src="/App/BaseResourceService.js"></script>
-    <script type="text/javascript" src="/App/books/AddBookController.js"></script>
-    <script type="text/javascript" src="/App/books/BookDetailsController.js"></script>
-    <script type="text/javascript" src="/App/books/BookController.js"></script>
-    <script type="text/javascript" src="/App/books/BookService.js"></script>
-    <script type="text/javascript" src="/App/authors/AuthorService.js"></script>
-    <script type="text/javascript" src="/App/genres/GenreService.js"></script>
 </body>
 </html>

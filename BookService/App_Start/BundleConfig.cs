@@ -40,15 +40,16 @@ namespace BookService
                     "~/Scripts/angular-busy.js",
                     "~/Scripts/angular-class.js"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/ng").Include(                                        
-            //        "~/Scripts/app/app.js",                    
-            //        "~/Scripts/app/BaseResourceService.js",
-            //        "~/Scripts/app/books/AddBookController.js",
-            //        "~/Scripts/app/books/BookDetailsController.js",
-            //        "~/Scripts/app/books/BookController.js",
-            //        "~/Scripts/app/books/BookService.js",
-            //        "~/Scripts/app/authors/AuthorService.js",
-            //        "~/Scripts/app/genres/GenreService.js"));
+            bundles.Add(new ScriptBundle("~/bundles/ng").Include(
+                    "~/Scripts/app/app.js",
+                    "~/Scripts/app/BaseResourceService.js",
+                    "~/Scripts/app/books/AddBookController.js",
+                    "~/Scripts/app/books/BookDetailsController.js",
+                    "~/Scripts/app/books/BookController.js",
+                    "~/Scripts/app/books/BookService.js",
+                    "~/Scripts/app/authors/AuthorService.js",
+                    "~/Scripts/app/genres/GenreService.js"));
+
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
